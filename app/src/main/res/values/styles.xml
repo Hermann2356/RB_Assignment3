@@ -18,6 +18,15 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
 
     <!--Components-->
+
+    <style name="cal_button">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_marginTop">20dp</item>
+        <item name="shapeAppearance">?shapeAppearanceSmallComponent</item>
+        <item name="android:textAppearance">?textAppearanceHeadline5</item>
+    </style>
+
     <style name="TextHeader" >
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>

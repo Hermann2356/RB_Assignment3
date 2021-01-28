@@ -1,18 +1,245 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/operand1_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?colorSurface"
+        android:text="2550"
+        android:gravity="right"
+        android:paddingTop="20dp"
+        android:paddingRight="20dp"
+        android:textAppearance="@style/TextAppearance.MyTheme.Headline3"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/operator_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_below="@id/operand1_tv"
+        android:text="+"
+        android:textAppearance="@style/TextAppearance.MyTheme.Headline3"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="40dp" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/operand2_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/operand1_tv"
+        android:text="30"
+        android:textAppearance="@style/TextAppearance.MyTheme.Headline3"
+        android:layout_alignParentRight="true"
+        android:layout_toStartOf="@+id/operand1_tv"
+        android:layout_marginTop="20dp"
+       android:paddingRight="20dp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/operand2_tv"
+        android:layout_marginTop="22dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp" >
+
+        <LinearLayout
+            android:id="@+id/row_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/rounded_layout"
+            android:orientation="horizontal"
+            android:weightSum="4">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/clear_btn"
+                style="@style/cal_button"
+                android:layout_below="@id/operand2_tv"
+                android:layout_weight="1"
+                android:text="C" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/plus_minus_btn"
+                style="@style/cal_button"
+                android:layout_below="@id/operand2_tv"
+                android:layout_marginTop="20dp"
+                android:layout_weight="1"
+                android:text="+/-" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/percentage_btn"
+                style="@style/cal_button"
+                android:layout_below="@id/operand2_tv"
+                android:layout_weight="1"
+                android:text="%" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/multiply_btn"
+                style="@style/cal_button"
+                android:layout_below="@id/operand2_tv"
+                android:layout_weight="1"
+                android:text="x" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/row_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/row_1"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:weightSum="4">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/seven_btn"
+                style="@style/cal_button"
+                android:layout_below="@id/operand2_tv"
+                android:layout_marginTop="20dp"
+                android:layout_weight="1"
+                android:text="7" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/eight_btn"
+                style="@style/cal_button"
+                android:layout_below="@id/operand2_tv"
+                android:layout_marginTop="20dp"
+                android:layout_weight="1"
+                android:text="8" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/nine_btn"
+                style="@style/cal_button"
+                android:layout_below="@id/operand2_tv"
+                android:layout_weight="1"
+                android:text="9" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/division_btn"
+                style="@style/cal_button"
+                android:layout_below="@id/operand2_tv"
+                android:layout_weight="1"
+                android:text="/" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/row_3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/row_2"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:weightSum="4">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/four_btn"
+                style="@style/cal_button"
+                android:layout_below="@id/operand2_tv"
+                android:layout_weight="1"
+                android:text="@string/four" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/five_btn"
+                style="@style/cal_button"
+                android:layout_below="@id/operand2_tv"
+                android:layout_weight="1"
+                android:text="@string/five" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/six_btn"
+                style="@style/cal_button"
+                android:layout_below="@id/operand2_tv"
+                android:layout_weight="1"
+                android:text="@string/six" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/subtract_btn"
+                style="@style/cal_button"
+                android:layout_below="@id/operand2_tv"
+                android:layout_weight="1"
+                android:text="@string/subtract" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/row_4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/row_3"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:weightSum="4">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/one_btn"
+                style="@style/cal_button"
+                android:layout_below="@id/operand2_tv"
+                android:layout_weight="1"
+                android:text="@string/one" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/two_btn"
+                style="@style/cal_button"
+                android:layout_below="@id/operand2_tv"
+                android:layout_weight="1"
+                android:text="@string/two" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/three_btn"
+                style="@style/cal_button"
+                android:layout_below="@id/operand2_tv"
+                android:layout_weight="1"
+                android:text="3" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/add_btn"
+                style="@style/cal_button"
+                android:layout_below="@id/operand2_tv"
+                android:layout_weight="1"
+                android:text="@string/plus" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/row_5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/row_4"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:weightSum="4">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/backspace_btn"
+                style="@style/cal_button"
+                android:layout_below="@id/operand2_tv"
+                android:layout_weight="1"
+                android:text="@string/del_button"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/zero_btn"
+                style="@style/cal_button"
+                android:layout_below="@id/operand2_tv"
+                android:layout_weight="1"
+                android:text="@string/zero" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/period_btn"
+                style="@style/cal_button"
+                android:layout_below="@id/operand2_tv"
+                android:layout_weight="1"
+                android:text="@string/period" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/equal_btn"
+                style="@style/cal_button"
+                android:layout_below="@id/operand2_tv"
+                android:layout_weight="1"
+                android:text="=" />
+        </LinearLayout>
+
+    </RelativeLayout>
+</RelativeLayout>
