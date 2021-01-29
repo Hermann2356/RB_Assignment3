@@ -10,22 +10,13 @@
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/operand1_tv"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="2550"
+        android:layout_height="100dp"
         android:gravity="right"
         android:paddingTop="20dp"
         android:paddingRight="20dp"
-        android:textAppearance="@style/TextAppearance.MyTheme.Headline3"/>
+        android:textAppearance="@style/TextAppearance.MyTheme.Headline3" />
 
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/operator_tv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/operand1_tv"
-        android:text="+"
-        android:textAppearance="@style/TextAppearance.MyTheme.Headline3"
-        android:layout_alignParentLeft="true"
-        android:layout_marginLeft="40dp" />
+
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/operand2_tv"
@@ -37,8 +28,7 @@
         android:layout_alignParentRight="true"
         android:layout_toStartOf="@+id/operand1_tv"
         android:layout_marginTop="20dp"
-       android:paddingRight="20dp" />
-
+        android:paddingRight="20dp" />
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
