@@ -5,13 +5,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity" >
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/operand1_tv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="?colorSurface"
         android:text="2550"
         android:gravity="right"
         android:paddingTop="20dp"
@@ -42,86 +41,80 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_below="@id/operand2_tv"
-        android:layout_marginTop="22dp"
-        android:paddingLeft="20dp"
-        android:paddingRight="20dp" >
+        android:layout_marginTop="21dp"
+        android:background="@drawable/rounded_layout"
+        android:paddingTop="30dp">
 
         <LinearLayout
             android:id="@+id/row_1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            style="@style/button_row"
             android:layout_weight="1"
-            android:background="@drawable/rounded_layout"
             android:orientation="horizontal"
             android:weightSum="4">
 
-            <androidx.appcompat.widget.AppCompatButton
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/clear_btn"
-                style="@style/cal_button"
+                style="@style/cal_operand_button"
                 android:layout_below="@id/operand2_tv"
                 android:layout_weight="1"
-                android:text="C" />
+                android:text="@string/clear_btn" />
 
-            <androidx.appcompat.widget.AppCompatButton
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/plus_minus_btn"
-                style="@style/cal_button"
+                style="@style/cal_operand_button"
                 android:layout_below="@id/operand2_tv"
-                android:layout_marginTop="20dp"
                 android:layout_weight="1"
-                android:text="+/-" />
+                android:text="@string/plus_minus_btn" />
 
-            <androidx.appcompat.widget.AppCompatButton
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/percentage_btn"
-                style="@style/cal_button"
+                style="@style/cal_operand_button"
                 android:layout_below="@id/operand2_tv"
                 android:layout_weight="1"
-                android:text="%" />
+                android:text="@string/percentage_btn" />
 
-            <androidx.appcompat.widget.AppCompatButton
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/multiply_btn"
-                style="@style/cal_button"
+                style="@style/cal_operand_button"
                 android:layout_below="@id/operand2_tv"
                 android:layout_weight="1"
-                android:text="x" />
+                android:text="@string/multiple_btn" />
         </LinearLayout>
 
         <LinearLayout
             android:id="@+id/row_2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            style="@style/button_row"
             android:layout_below="@+id/row_1"
             android:layout_weight="1"
             android:orientation="horizontal"
             android:weightSum="4">
 
-            <androidx.appcompat.widget.AppCompatButton
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/seven_btn"
                 style="@style/cal_button"
                 android:layout_below="@id/operand2_tv"
-                android:layout_marginTop="20dp"
                 android:layout_weight="1"
-                android:text="7" />
+                android:text="@string/seven_btn" />
 
-            <androidx.appcompat.widget.AppCompatButton
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/eight_btn"
                 style="@style/cal_button"
                 android:layout_below="@id/operand2_tv"
-                android:layout_marginTop="20dp"
                 android:layout_weight="1"
-                android:text="8" />
+                android:text="@string/eight_btn" />
 
-            <androidx.appcompat.widget.AppCompatButton
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/nine_btn"
                 style="@style/cal_button"
                 android:layout_below="@id/operand2_tv"
                 android:layout_weight="1"
-                android:text="9" />
+                android:text="@string/nine_btn" />
 
-            <androidx.appcompat.widget.AppCompatButton
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/division_btn"
-                style="@style/cal_button"
+                style="@style/cal_operand_button"
                 android:layout_below="@id/operand2_tv"
                 android:layout_weight="1"
                 android:text="/" />
@@ -129,75 +122,73 @@
 
         <LinearLayout
             android:id="@+id/row_3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            style="@style/button_row"
             android:layout_below="@+id/row_2"
             android:layout_weight="1"
             android:orientation="horizontal"
             android:weightSum="4">
 
-            <androidx.appcompat.widget.AppCompatButton
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/four_btn"
                 style="@style/cal_button"
                 android:layout_below="@id/operand2_tv"
                 android:layout_weight="1"
-                android:text="@string/four" />
+                android:text="@string/four_btn" />
 
-            <androidx.appcompat.widget.AppCompatButton
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/five_btn"
                 style="@style/cal_button"
                 android:layout_below="@id/operand2_tv"
                 android:layout_weight="1"
-                android:text="@string/five" />
+                android:text="@string/five_btn" />
 
-            <androidx.appcompat.widget.AppCompatButton
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/six_btn"
                 style="@style/cal_button"
                 android:layout_below="@id/operand2_tv"
                 android:layout_weight="1"
-                android:text="@string/six" />
+                android:text="@string/six_btn" />
 
-            <androidx.appcompat.widget.AppCompatButton
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/subtract_btn"
-                style="@style/cal_button"
+                style="@style/cal_operand_button"
                 android:layout_below="@id/operand2_tv"
                 android:layout_weight="1"
-                android:text="@string/subtract" />
+                android:text="@string/subtract_btn" />
         </LinearLayout>
 
         <LinearLayout
             android:id="@+id/row_4"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            style="@style/button_row"
             android:layout_below="@+id/row_3"
             android:layout_weight="1"
             android:orientation="horizontal"
             android:weightSum="4">
 
-            <androidx.appcompat.widget.AppCompatButton
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/one_btn"
                 style="@style/cal_button"
                 android:layout_below="@id/operand2_tv"
                 android:layout_weight="1"
                 android:text="@string/one" />
 
-            <androidx.appcompat.widget.AppCompatButton
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/two_btn"
                 style="@style/cal_button"
                 android:layout_below="@id/operand2_tv"
                 android:layout_weight="1"
                 android:text="@string/two" />
 
-            <androidx.appcompat.widget.AppCompatButton
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/three_btn"
                 style="@style/cal_button"
                 android:layout_below="@id/operand2_tv"
                 android:layout_weight="1"
                 android:text="3" />
 
-            <androidx.appcompat.widget.AppCompatButton
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/add_btn"
-                style="@style/cal_button"
+                style="@style/cal_operand_button"
                 android:layout_below="@id/operand2_tv"
                 android:layout_weight="1"
                 android:text="@string/plus" />
@@ -205,37 +196,36 @@
 
         <LinearLayout
             android:id="@+id/row_5"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            style="@style/button_row"
             android:layout_below="@+id/row_4"
             android:layout_weight="1"
             android:orientation="horizontal"
             android:weightSum="4">
 
-            <androidx.appcompat.widget.AppCompatButton
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/backspace_btn"
-                style="@style/cal_button"
+                style="@style/cal_operand_button"
                 android:layout_below="@id/operand2_tv"
                 android:layout_weight="1"
-                android:text="@string/del_button"/>
+                android:text="@string/del_button" />
 
-            <androidx.appcompat.widget.AppCompatButton
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/zero_btn"
                 style="@style/cal_button"
                 android:layout_below="@id/operand2_tv"
                 android:layout_weight="1"
                 android:text="@string/zero" />
 
-            <androidx.appcompat.widget.AppCompatButton
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/period_btn"
                 style="@style/cal_button"
                 android:layout_below="@id/operand2_tv"
                 android:layout_weight="1"
                 android:text="@string/period" />
 
-            <androidx.appcompat.widget.AppCompatButton
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/equal_btn"
-                style="@style/cal_button"
+                style="@style/cal_operand_button"
                 android:layout_below="@id/operand2_tv"
                 android:layout_weight="1"
                 android:text="=" />

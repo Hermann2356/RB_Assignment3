@@ -23,8 +23,8 @@
         <!--colorPrimary colors map to components and elements, such as app bars and buttons. -->
         <!--colorSecondary colors are most often used as accents on components, such as FABs and -->
         <!--selection controls.-->
-        <item name="colorPrimary">@android:color/white</item>
-        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorPrimary">@color/white_50</item>
+        <item name="colorPrimaryVariant">@color/white_50</item>
         <item name="colorSecondary">@color/green_200</item>
         <item name="colorSecondaryVariant">@color/green_500</item>
         <!--colorBackground appears behind scrollable content and is used for the default window-->
@@ -39,7 +39,7 @@
         <item name="colorOnPrimary">@color/black_800</item>
         <item name="colorOnSecondary">@color/black_900</item>
         <item name="colorOnBackground">@color/black_900</item>
-        <item name="colorOnSurface">@color/black_900</item>
+        <item name="colorOnSurface">@color/red_200</item>
         <item name="colorOnError">@color/white_50</item>
         <!--Material type attributes-->
         <item name="textAppearanceHeadline1">@style/TextAppearance.MyTheme.Headline1</item>
